@@ -3,7 +3,7 @@
 This task list is designed so each item is a medium-to-large GitHub PR. When Tasks 1-9 are complete, the MVP defined in `PLAN.md` is fully delivered.
 
 ## Task Checklist
-- [ ] Task 1 - Project foundation, runtime, and schema baseline
+- [x] Task 1 - Project foundation, runtime, and schema baseline
 - [ ] Task 2 - Google OAuth login and family-scoped authorization
 - [ ] Task 3 - Core task CRUD API and validations
 - [ ] Task 4 - Task list UI, create/edit flows, and state indicators
@@ -26,6 +26,15 @@ This task list is designed so each item is a medium-to-large GitHub PR. When Tas
 - `uv run pytest` passes for backend smoke tests.
 - Frontend test command (project standard) passes in CI.
 - Applying migrations from empty DB creates all required tables.
+
+### Completion Evidence
+- Backend tests: `cd backend && uv run pytest` -> `2 passed`.
+- Frontend tests: `cd frontend && npm run test -- --run` -> `1 passed`.
+- Migration validation from empty DB:
+  - `DATABASE_URL=sqlite:////tmp/task1_schema.db uv run alembic upgrade head`
+  - Verified tables include: `users`, `tasks`, `task_dependencies`, `tags`, `task_tags`, `calendar_sync`, `notifications`, `notification_settings`.
+- Backend runtime smoke: started `uvicorn` and verified `GET /api/health` returns `{\"status\":\"ok\",\"environment\":\"development\"}`.
+- Frontend runtime smoke: started Vite app against backend and captured verification screenshot at `/tmp/task1-ui.png`.
 
 ## Task 2 - Google OAuth login and family-scoped authorization (Large PR)
 ### Deliverables
