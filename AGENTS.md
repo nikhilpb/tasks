@@ -14,7 +14,7 @@
 - Develope iteratively. If you are building a UI, take screenshots and reflect on your work. For scripts run them to verify the output. Fix things if you see something wrong.
 - Once you are done with code changes. You MUST verify that all the relevant tests pass including the e2e tests. For frontend changes you should take screenshots of the webpage to confirm the behavior. For the backend, spin up the backend and check the API is working as inteded.
 - Once you have tested and confirmed everything, you MUST commit the changes and create a PR.
-- Keep `/Users/nikhilbhat/.codex/worktrees/0f20/tasks/TASKS.md` updated as work completes: check off each finished task in the checklist and ensure completion evidence is present in the corresponding PR.
+- Keep `TASKS.md` updated as work completes: check off each finished task in the checklist and ensure completion evidence is present in the corresponding PR.
 
 Plan for the app in: PLAN.md
 UX mocks in ux-mock/
