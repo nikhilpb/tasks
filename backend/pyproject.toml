@@ -1,0 +1,24 @@
+[project]
+name = "family-task-backend"
+version = "0.1.0"
+description = "FastAPI backend for Family Task Manager"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "alembic>=1.14.1",
+  "fastapi>=0.115.12",
+  "httpx>=0.28.1",
+  "pydantic-settings>=2.9.1",
+  "pytest>=8.3.5",
+  "sqlalchemy>=2.0.40",
+  "uvicorn[standard]>=0.34.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
