@@ -16,3 +16,4 @@
 - Once you have tested and confirmed everything, you MUST commit the changes and create a PR.
 
 Plan for the app in: PLAN.md
+UX mocks in ux-mock/
